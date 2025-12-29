@@ -30,11 +30,7 @@ void toOne(int a) {
     printf("%d\t", a);
     toOne(a - 1);
 }
-int sumn(int n) {int sumn2(int n) {
-    if (n <= 0)
-        return 0;
-    return n + sumn2(n - 2);
-}
+int sumn(int n) {
     if (n <= 0)
         return 0;
     return n + sumn(n - 1);
