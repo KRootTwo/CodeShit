@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ass3/Ass3.iml" filepath="$PROJECT_DIR$/Ass3/Ass3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ass4/Ass4.iml" filepath="$PROJECT_DIR$/Ass4/Ass4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ass6/Ass6.iml" filepath="$PROJECT_DIR$/Ass6/Ass6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Blehh/Blehh.iml" filepath="$PROJECT_DIR$/Blehh/Blehh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/El_primo/El_primo.iml" filepath="$PROJECT_DIR$/El_primo/El_primo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java_intellij.iml" filepath="$PROJECT_DIR$/.idea/Java_intellij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mo/Mo.iml" filepath="$PROJECT_DIR$/Mo/Mo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pracfold/Pracfold.iml" filepath="$PROJECT_DIR$/Pracfold/Pracfold.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k23/k23.iml" filepath="$PROJECT_DIR$/k23/k23.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+package question_05;
+import java.math.*;
+import java.util.Scanner;
+
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner blud = new Scanner(System.in);
+		int radius = blud.nextInt();
+		System.out.println("Radius of circle: ");
+		System.out.println("Perimeter of the circle is: " + radius*Math.PI*2);
+	}
+
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+/home/ktv/CodeShit/java_eclipse/.metadata/.plugins/org.eclipse.jdt.core
+1969978328.index
+2115855594.index
+3191082582.index
+3466832058.index
+1865797976.index
+1033186897.index

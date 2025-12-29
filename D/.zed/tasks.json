@@ -1,0 +1,8 @@
+[
+  {
+    "label": "Run C",
+    "command": "gcc $ZED_FILE -Wall -Wextra -O2 -o ${ZED_FILE%.c} && ./${ZED_FILE%.c}",
+    "use_new_terminal": true
+  }
+]
+

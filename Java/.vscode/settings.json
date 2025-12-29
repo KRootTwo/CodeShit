@@ -1,0 +1,35 @@
+{
+    "editor.fontSize": 18,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.mouseWheelZoom": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.iconTheme": "catppuccin-latte",
+    "window.commandCenter": false,
+    "workbench.statusBar.visible": false,
+    "window.customTitleBarVisibility": "windowed",
+    "workbench.activityBar.location": "bottom",
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+
+        "c": "clear && mkdir -p $HOME/CodeShit/D/bin && gcc $fileName -Wall -Wextra -O2 -lm -o $HOME/CodeShit/D/bin/$fileNameWithoutExt && $HOME/CodeShit/D/bin/$fileNameWithoutExt",
+
+        "java": "clear && javac $fileName && java $fileNameWithoutExt"
+
+    },
+     "files.exclude": {
+        "**/*.class": true,
+        "**/*.exe": true,
+        "**/*.o": true,
+        "**/*.out": true,
+        "**/a.out": true,
+        "**/bin": true
+    },
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.experimental.emptyResponseInformation": false,
+    "editor.inlayHints.enabled": "off",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false
+}

@@ -1,0 +1,28 @@
+package question_08;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner gh = new Scanner(System.in);
+		System.out.print("First Number: ");
+		int a = gh.nextInt();
+		System.out.print("First Number: ");
+		int b = gh.nextInt();
+		
+		System.out.println("A = " + a);
+		System.out.println("B = " + b);
+		
+		System.out.println("Swapping numbers...");
+		
+		System.out.println("A = " + b);
+		System.out.println("B = " + a);
+		
+//		int c = b;
+//		b = a ;
+//		a = c ;
+//		
+//		System.out.println("A = " + a);
+//		System.out.println("B = " + b);
+		
+	}
+}

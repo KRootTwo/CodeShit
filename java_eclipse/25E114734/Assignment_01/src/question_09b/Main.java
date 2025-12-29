@@ -1,0 +1,35 @@
+package question_09b;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+//		Scanner gh = new Scanner(System.in);
+//		System.out.print("First Number: ");
+//		int a = gh.nextInt();
+//		System.out.print("Second Number: ");
+//		int b = gh.nextInt();
+//		System.out.print("Third Number: ");
+//		int c = gh.nextInt();
+		
+		int a = 20 ;
+		int b = 30 ;
+		int c = 10 ;
+		
+		System.out.println("A = " + a);
+		System.out.println("B = " + b);
+		System.out.println("C = " + c);
+		
+		System.out.println("Swapping numbers...");
+		
+		a = a+b+c ;
+		c = a-b-c ;
+		b = a-b-c ;
+		a = a-b-c ;
+		
+		System.out.println("A = " + a);
+		System.out.println("B = " + b);
+		System.out.println("C = " + c);
+	}
+
+}
