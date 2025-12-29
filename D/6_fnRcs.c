@@ -13,7 +13,6 @@ int main () {
     // sum(4, 5);
     // sum(3, 4);
     // printf("addition: %d\n", add);
-
     // int o = fact(9);
     // printf("factorial: %d\n", o);
     // toOne(10);
@@ -31,7 +30,11 @@ void toOne(int a) {
     printf("%d\t", a);
     toOne(a - 1);
 }
-int sumn(int n) {
+int sumn(int n) {int sumn2(int n) {
+    if (n <= 0)
+        return 0;
+    return n + sumn2(n - 2);
+}
     if (n <= 0)
         return 0;
     return n + sumn(n - 1);
