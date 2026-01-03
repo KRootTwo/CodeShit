@@ -1,3 +1,3 @@
-from manim import *
+import manim 
 
 print ("shit")
