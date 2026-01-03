@@ -1,2 +1,0 @@
-Write a Java Program to input a character from command-line and display the ASCII
-value of the entered character.

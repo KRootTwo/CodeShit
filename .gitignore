@@ -1,0 +1,30 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+*/venv/
+
+# ===== C / C++ =====
+*.o
+*.out
+*.exe
+bin/
+
+# ===== Java =====
+*.class
+.java_metadata/
+.metadata/
+
+# ===== IDEs =====
+.vscode/
+.idea/
+*.iml
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
