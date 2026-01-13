@@ -1,10 +1,9 @@
-// package blehh;
+package blehh;
 import java.util.*;
-import java.math.*;
 
-public class siuu{
+public class siuuu{
     public static void main (String [] args) {
-        Scanner siuuu = new Scanner(System.in);
+        Scanner siuu = new Scanner(System.in);
         
         int ngg = (int) (Math.random()*10);
         int gg = -1;
@@ -12,7 +11,7 @@ public class siuu{
         while (gg != ngg) {
 
             System.out.print("Enter yo number (0-9) fam: ");
-            gg = siuuu.nextInt();
+            gg = siuu.nextInt();
 
             if (gg == ngg){
                 System.out.println("Siuuu Nigga.");
@@ -20,6 +19,6 @@ public class siuu{
                 System.out.println("Nah Nigga. Try again.");
             }
         }
-
+        siuu.close();
     }
 }
