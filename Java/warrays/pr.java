@@ -1,5 +1,5 @@
 // package warrays;
-
+import java.util.*;
 public class pr {
     public static void linearSearch(int arr[], int k) {
         int i;
@@ -118,14 +118,14 @@ public class pr {
         int arr2[] = {-1, -2, 3, -4, -5, 6, -7, -8, -9};
         int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        // linearSearch(arr, 8);
-        // binarySearch(arr, 8);
-        // pairUp(arr);
-        // subArr(arr);
-        // revArr(arr);
-        // String g = Arrays.toString(arr);
-        // System.out.println(g);
-        // System.out.println(maxSubArrSumPS(arr));
+        linearSearch(arr, 8);
+        binarySearch(arr, 8);
+        pairUp(arr);
+        subArr(arr);
+        revArr(arr);
+        String g = Arrays.toString(arr);
+        System.out.println(g);
+        System.out.println(maxSubArrSumPS(arr));
         System.out.println(mxSbArSmKadaneE(arr2));
 
     }

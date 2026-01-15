@@ -3,7 +3,7 @@
     "editor.mouseWheelZoom": true,
     "terminal.integrated.mouseWheelZoom": true,
     "code-runner.saveAllFilesBeforeRun": true,
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "GitHub Dark Default",
     "git.openRepositoryInParentFolders": "always",
     "workbench.iconTheme": "catppuccin-latte",
     "window.commandCenter": false,

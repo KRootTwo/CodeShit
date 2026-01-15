@@ -1,4 +1,4 @@
-package ass6;
+package ass7;
 import java.util.*;
 
 public class trail1 {

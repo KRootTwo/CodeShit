@@ -1,4 +1,4 @@
-package ass6;
+package ass7;
 import java.util.*;
 /*
  * Write a Java Program that uses an array to read a sequence of integers between 1
