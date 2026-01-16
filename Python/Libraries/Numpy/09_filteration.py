@@ -8,18 +8,18 @@ ages = np.array ([
     [39, 22, 15, 99, 18, 19, 20, 21]
 ])
 
-# teens = ages[ages < 18]
-# adults = ages[(ages >= 18) & (ages < 60)]  ## cuz numpy written in C
-# twats = ages[(ages > 60) | (ages < 18)]
-# seniors = ages[ages > 60]
-# evens = ages[ages % 2 == 0]
-# odds = ages[ages % 2 != 0]
+teens = ages[ages < 18]
+adults = ages[(ages >= 18) & (ages < 60)]  ## cuz numpy written in C
+twats = ages[(ages > 60) | (ages < 18)]
+seniors = ages[ages > 60]
+evens = ages[ages % 2 == 0]
+odds = ages[ages % 2 != 0]
 
-# print(teens)
-# print(adults)
-# print(twats)
-# print(evens)
-# print(odds)
+print(teens)
+print(adults)
+print(twats)
+print(evens)
+print(odds)
 
 adultss = np.where((ages > 18) & (ages < 60), ages, np.nan)
 

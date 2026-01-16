@@ -15,11 +15,6 @@ except KeyError:
     print("Wth Aitah")
 
 
-
-
-
-
-
 """
 if variable in dataframe["Name"].values:
     print("Found")

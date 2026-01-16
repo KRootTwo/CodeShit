@@ -12,7 +12,7 @@ df = df.drop(columns = ["No"])
 
 ## Handle Missing data
 #Drops all the rows with missing "Type2". na - not available
-# df = df.dropna(subset = ["Type2"])
+df = df.dropna(subset = ["Type2"])
 df = df.fillna({"Type2" : "None"}) 
 
 ## Fix Inconsistent Values

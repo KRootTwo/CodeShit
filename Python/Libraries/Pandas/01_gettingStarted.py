@@ -10,18 +10,18 @@ spredsheet (1-dimensional)
 
 ## With Listssss
 
-# data = [100, 201, 303]
+data = [100, 201, 303]
 
-# ser = pd.Series(data, index = ["a", "b", "c"])
+ser = pd.Series(data, index = ["a", "b", "c"])
 
-# print(ser)
+print(ser)
 
-# ser.loc["c"] = 300 ## Locate
+ser.loc["c"] = 300 ## Locate
 
-# print(ser.loc["b"])
-# print(ser.iloc[0]) ## Integer Location
+print(ser.loc["b"])
+print(ser.iloc[0]) ## Integer Location
 
-# print(ser[ser > 200])
+print(ser[ser > 200])
 
 ## With Dictionariessss
 

@@ -6,7 +6,6 @@ becomes uppercase, effectively converting the string to title case.
 The program should include a method with the following header:
 public static String toTitleCase(String str)
 The method should take a string as input and return the converted string where the
-first letter of each word is capitalized.
 Example:
  		• Input: "welcome to java"
  		• Output: "Welcome To Java"
