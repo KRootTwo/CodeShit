@@ -12,7 +12,9 @@ public class pr1 {
         System.out.println("Enter array length: ");
         int n = blehh.nextInt();
 
-        int aint rr[] = new int[n]; for (i : arr) {
+        int arr[] = new int[n]; 
+
+        for (int i : arr) {
             
         }
 

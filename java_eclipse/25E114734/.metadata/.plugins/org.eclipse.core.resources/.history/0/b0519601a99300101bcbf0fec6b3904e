@@ -1,9 +1,0 @@
-package question_03;
-
-public class Main {
-	public static void main(String[] args) {
-		System.out.print("Name: Koustav Jana \n"
-				+ "Branch: Computer Science & Engineering \nYear of Study: 1st Year \nUniversity Roll No: 25E114734");
-	}
-
-}
