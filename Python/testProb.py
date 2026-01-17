@@ -8,6 +8,13 @@ sum = 0
 tp = ()
 
 for i in nested_tuple:
+    for j in i: 
+        if (isinstance(j, int)):
+            print(j)
+
+
+'''
+for i in nested_tuple:
     if (type(i) != type(1)):
         s = i
         for j in s:
@@ -20,3 +27,5 @@ for i in nested_tuple:
                         sum += k
 
 print ("Muhfucking sum: ", sum)
+
+'''
