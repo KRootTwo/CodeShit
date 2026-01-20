@@ -1,11 +1,13 @@
 import numpy as np  
 
-arr = np.array([
-    [ 1,  2,  3,  4],
-    [ 5,  6,  7,  8],
-    [ 9, 10, 11, 12],
-    [13, 14, 15, 16]
-])
+arr = np.array(
+    [[ 1,  2,  3,  4],
+     [ 5,  6,  7,  8],
+     [ 9, 10, 11, 12],
+     [13, 14, 15, 16]]
+)
+
+print(arr.shape)
 
 ## Same as string slicing array[start:stop:step]
 ## mind u stop is exclusive don't forget it like the last fucking time.

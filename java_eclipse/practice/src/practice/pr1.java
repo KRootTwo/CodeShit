@@ -16,7 +16,6 @@ public class pr1 {
 	}
 	public static void readArr(int[] arr) {
 		System.out.print("Enter elements: ");
-		
 		for (int i = 0; i < arr.length; i++) {
 			int n = blehh.nextInt();
 			arr[i] = n;
@@ -69,18 +68,35 @@ public class pr1 {
 		}
 		return l;
 	}
-	public static int secLgst(int [] arr) {
+	public static int slgst(int [] arr) {
 		int l = arr[0], sl = Integer.MIN_VALUE;
-		for (int i = 1; i < arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] > l) {
 				sl = l;
 				l = arr[i];
 			}
-			else if (arr[i] > sl && arr[i] < l) {
+			if (arr[i] > sl && arr[i] < l) {
 				sl = arr[i];
 			}
 		}
 		return sl;
+	}
+	public static int tlgst(int [] arr) {
+		int l = arr[0], sl = Integer.MIN_VALUE,tl = Integer.MIN_VALUE;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > l) {
+				tl = sl;
+				sl = l;
+				l = arr[i];
+			}
+			if (arr[i] > sl && arr[i] < l) {
+				sl = arr[i];
+			}
+			if (arr[i] > tl && arr[i] < sl) {
+				tl = arr[i];
+			}
+		}
+		return tl;
 	}
 	public static void mvZeroToFrontNoPrsv(int [] arr) {
 		int c = 0, temp = 0;
@@ -101,6 +117,29 @@ public class pr1 {
 		for (int i : arr) 
 			if (i != 0) temp[id++] = i;
 		System.arraycopy(temp, 0, arr, 0, arr.length);
+	}
+	public static void mvZeroToEnd(int[] arr) {
+		int[] temp = new int[arr.length];
+		int c = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] != 0) {
+				temp[c++] = arr[i];
+			}
+		}
+		System.arraycopy(temp, 0, arr, 0, arr.length);
+	}
+	public static void mvZeroToEndAdv(int[] arr) {
+		int pos = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] != 0) {
+				arr[pos++] = arr[i];
+			}
+		}
+
+		while (pos < arr.length) {
+			arr[pos++] = 0;
+		}
 	}
 	public static void revArr(int [] arr) {
 		int s = 0, e = arr.length - 1;
@@ -150,14 +189,20 @@ public class pr1 {
 	}
 	public static void main(String[] args) {
 		int arr[] = new int [arrSize()];
-		fillArr(arr);
+//		fillArr(arr);
+//		printArr(arr);
+//		bubbleSort(arr);
+		readArr(arr);
 		printArr(arr);
-		bubbleSort(arr);
+//		revArr(arr);
+//		printArr(arr);
+		System.out.println(lgst(arr));
+		System.out.println(slgst(arr));
+		System.out.println(tlgst(arr));
+		mvZeroToEnd(arr);
 		printArr(arr);
-		revArr(arr);
-		printArr(arr);
-		int n = searchWhat();
-		binarySearch(arr, n);
+//		int n = searchWhat();
+//		binarySearch(arr, n);
 	}
 
 }
