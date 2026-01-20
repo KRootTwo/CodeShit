@@ -1,0 +1,47 @@
+1. import numpy & check it's version
+2. make an np array & multiply all elements by 2
+3. check dimension & shape of the array
+4. make an 3 dimension array of all alphabets as chars & print
+   "Free Young Thug, Fuck Nigga." by accessing the chars
+5. create a (4, 4) array in range (1, 17) & use slicing to
+    a. print the every 2nd row
+    b. print the every 2nd column
+    c. print the array in reverse
+    d. print the 1st & 3rd row & column using negative int to slice
+6. arr = np.array([1, 2, 3])
+   arr2 = np.array([1.02, 2.50, 3.99])
+   radii = np.array([11, 21, 34])
+    a. add arr & arr2
+    b. square, root, floor, ceil, round & add arr using Vectorized Math
+       Funcs
+    c. use Element-wise Arithmatic to +, -, *, /, **, // arr & arr2
+7. scores = np.array([91, 55, 100, 72, 82, 64, 51, 60])
+    a. make a fails array using subscript op <60
+    b. make a passes array using subscript op >=60
+    c. modify the scores array using subscript op to replace <60 with 0s
+8. array1 = np.array([[1, 2, 3, 4, 5, 6, 7, 8, 9]])
+   array2 = np.array([[1], [2], [3], [4], [5], [6], [7], [8], [9]])
+    use broadcasting. list the conditions for broadcasting.
+9. array = np.array([[1, 2, 3, 4, 5],
+                  [6, 7, 8, 9, 10]])
+    a. calculate sum,Standard deviation, mean, variation,
+                 index of max, index of min, index of max, index of min.
+    b. sum of all rows
+    c. sum of all columns
+10. ages = np.array (
+    [[21, 17, 19, 20, 16, 30, 18, 65],
+     [39, 22, 15, 99, 18, 19, 20, 21]]
+     )
+     a. Filter out & print(teens, adults, twats, evens, odds)
+     b. create adults array using np.where
+11. create random arrays using np.random.default_rng()
+12. fruits = np.array(["Mango", "Orange", "Peach", "Grape", "Apple",
+    "Raspberry", "Durian", "Pomegranate", "Papaya", "Banana",
+    "Watermelons", "Pineapple", "Dragon-fruit", "Apricot", "Strawberry",
+    "Kiwi"])
+      choose random fruits using np.random.default_rng()
+
+
+
+
+
