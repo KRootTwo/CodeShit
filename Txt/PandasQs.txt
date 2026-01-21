@@ -1,0 +1,13 @@
+1. import pandas & check version
+2. Fuck the basics, read the 1st gen pokemon csv data & make a
+    pandas dataframe.
+3. print the whole df
+4. print only the "Name", "Weight" & "Height"
+5. locate bulbasaur to blastiose (loc & iloc)
+6. print only the basic forms(non-evolved) from 0 to 9
+    (inclusive) & first 3 columns.
+7. write a search system for pokedex.
+8. use filtering to sort pokemons into tall (>=2), short,
+    heavy (>100), light, water_type, fire_type, grass_type
+9. calculate mean, median, mode, std var, sum, max, min, count
+    of "Height" column
