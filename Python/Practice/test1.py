@@ -1,11 +1,7 @@
-import pdb 
+d = [
+    {'name' : 'Bhadwa', 'age' : 69},
+    {'name' : 'Bewda', 'age' : 14}
+]
 
-for i in range (1, 11) :
-    pdb.set_trace()
-    print(i)
-
-
-"""
-n s c p l q
-posconquil
-"""
+for i in d :
+    print(i['name'])
