@@ -1,0 +1,19 @@
+package Practice4;
+
+public class pr4 {
+
+	public static void main(String[] args) {
+		int a = Integer.parseInt(args[0]);
+		int b = Integer.parseInt(args[1]);
+		int c = Integer.parseInt(args[2]);
+		boolean p = (a <= b * c || b <= a * c || c <= a * b);
+		
+		System.out.println(p);
+		int A[] = {1, 2, 3, 4, 5};
+		int i = ++A[2];
+		int j = A[2]++;
+		int k = A[i++];
+		System.out.println(i +" "+ j +" "+ k);
+	}
+
+}

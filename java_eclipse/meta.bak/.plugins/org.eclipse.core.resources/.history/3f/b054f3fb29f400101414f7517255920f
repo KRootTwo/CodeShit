@@ -1,0 +1,122 @@
+package practice;
+
+import java.util.*;
+
+public class pr1 {
+	public static void readArr(int[] arr) {
+		Scanner blehh = new Scanner(System.in);
+		System.out.print("Enter size: ");
+		
+		for (int i = 0; i < arr.length; i++) {
+			int n = blehh.nextInt();
+			arr[i] = n;
+		}
+		blehh.close();
+	}
+	public static void fillArr(int [] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			int s = (int) (Math.random() * 100);
+			arr[i] = s;
+		}
+	}
+	public static void printArr(int [] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+	public static void freqRead(int[] counts) {
+		Scanner blehh = new Scanner(System.in);
+		System.out.print("Enter elements: ");
+		
+		for (int i = 0; i< counts.length; i++) {
+			int n = blehh.nextInt();
+			counts[n]++;
+		}
+		blehh.close();
+	}
+	public static int[] elmDupes(int [] arr) {
+		int temp[] = new int [arr.length];
+		int c = 0;
+		for (int i = 0; i < arr.length; i++) {
+			boolean dup = false;
+			for (int j = 0; j < i; j++) {
+				if (arr[i] == arr[j]) {
+					dup = true;
+					break;
+				}
+			}
+			if (!dup) {
+				temp[c] = arr[i];
+				c++;
+			}
+		}
+		int rex[] = new int[c];
+		System.arraycopy(temp, 0, rex, 0, c);
+		return rex;
+	}
+	public static int lgst(int[] arr) {
+		int l = arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] > l) l = arr[i];
+		}
+		return l;
+	}
+	public static int secLgst(int [] arr) {
+		int l = arr[0], sl = Integer.MIN_VALUE;
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] > l) {
+				sl = l;
+				l = arr[i];
+			}
+			else if (arr[i] > sl && arr[i] < l) {
+				sl = arr[i];
+			}
+		}
+		return sl;
+	}
+	public static void mvZeroToFrontNoPrsv(int [] arr) {
+		int c = 0, temp = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == 0) {
+				temp = arr[i];
+				arr[i] = arr[c];
+				arr[c] = temp;
+				c++;
+			}
+		}
+	}
+	public static void mvZeroToFront(int [] arr) {
+		int temp[] = new int [arr.length];
+		int id = 0;
+		for (int i : arr) 
+			if (i == 0) temp[id++] = 0;
+		for (int i : arr) 
+			if (i != 0) temp[id++] = i;
+		System.arraycopy(temp, 0, arr, 0, arr.length);
+	}
+	public static void revArr(int [] arr) {
+		int s = arr[0], e = arr[arr.length - 1];
+		while (s < e) {
+			int temp = s;
+			s = e;
+			e = temp;
+			s++; e--;
+		}
+	}
+	public static void main(String[] args) {
+		Scanner blehh = new Scanner(System.in);
+		System.out.print("Enter size: ");
+		int n = blehh.nextInt();
+		
+		int arr[] = new int [n];
+		fillArr(arr);
+		printArr(arr);
+		revArr(arr);
+		printArr(arr);
+		
+		blehh.close();
+
+	}
+
+}

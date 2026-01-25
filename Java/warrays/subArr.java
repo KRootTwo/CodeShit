@@ -57,7 +57,7 @@ public class subArr {
         int arr2[] = {-1, -2, -3, -4, -5, -6, -7, -8, -9};
         System.out.println(maxSubArrSumKadane(arr));
         System.out.println(maxSubArrSumKadane(arr2));
-
+        
 
         
         // String g = Arrays.toString(arr);

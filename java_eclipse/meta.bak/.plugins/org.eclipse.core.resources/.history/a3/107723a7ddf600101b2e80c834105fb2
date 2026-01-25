@@ -1,0 +1,65 @@
+package practice2;
+import java.util.*;
+
+public class pr2 {
+	public static String rev(String s) {
+		return new StringBuilder (s).reverse().toString();
+	}
+	public static int[] zeroToFront(int[] arr) {
+		int [] temp = new int[arr.length];
+		int c = 0;
+		for (int i : arr) {
+			if (i != 0) {
+				temp[c] = i;
+				c++;
+			}
+		}
+		int[] res = new int[arr.length];
+		System.arraycopy(temp, 0, res, c, c);
+		return res;
+	}
+	public static int decimalToOctal(int d) {
+		if (d == 0) return 0;
+		StringBuilder oct = new StringBuilder();
+		while (d != 0) {
+			oct.append(d % 8);
+			d /= 8;
+		}
+		return Integer.parseInt(oct.reverse().toString());
+	}
+	public static void bubbleSort(double[] arr) {
+		double s = arr[0], e = arr[arr.length - 1], m = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = 0; j < arr.length - i - 1; j++) {
+				if (arr[j] > arr[j + 1]) {
+					double temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
+	}
+	public static int[] elmDupes(int[] list) {
+		int[] temp = new int[list.length];
+		int c = 0;
+		for (int i = 0; i < list.length; i ++) {
+			boolean dup = false;
+			for (int j : temp) {
+				if (j == list[i]) dup = true;
+			}
+			if (!dup) temp[c++] = list[i];
+		}
+		int rez[] = new int[c];
+		System.arraycopy(temp, 0, rez, 0, c);
+		return rez;
+	}
+	public static void main (String [] args) {
+		int[] arr = {1, 2, 0, 3, 0, 3, 0, 1, 0, 0, 9, 0, 1, 9, 9, 3, 4};
+		double[] arr2 = {1, 7, 4, 3, 8, 2, 8, 2, 5, 9, 4, 2, 0};
+		System.out.println(Arrays.toString(zeroToFront(arr)));
+		System.out.println(decimalToOctal(125));
+		bubbleSort(arr2);
+		System.out.println(Arrays.toString(arr2));
+		
+	}
+}
