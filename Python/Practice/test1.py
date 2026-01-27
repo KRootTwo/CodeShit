@@ -4,4 +4,4 @@ d = [
 ]
 
 for i in d :
-    print(i['name'])
+    print(i['namecapHad.png'])

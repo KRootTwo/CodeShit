@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+/home/ktv/CodeShit/java_eclipse/.metadata/.plugins/org.eclipse.jdt.core
-2710549243.index
-1865797976.index
-3018271341.index
