@@ -44,7 +44,6 @@ for i in fruits :
     d[i] = c
 
 print(d)
-
 # 3 c
 n = int(input("Enter N: "))
 n += 1
