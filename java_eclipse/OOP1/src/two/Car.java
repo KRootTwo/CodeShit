@@ -10,7 +10,7 @@ public class Car {
 	int o;
 	
 	public void init(int wheels, String color, float maxSpeed,
-			float fuel, int seats, boolean drivable) {
+		float fuel, int seats, boolean drivable) {
 		wheels = this.wheels;
 		o = this.wheels;
 		color = this.color;

@@ -6,6 +6,5 @@ public class Main {
 		Car shit = new Car();
 		shit.init(4, "Red", 180, 20, 4, true);
 		shit.stats();
-		
 	}
 }
