@@ -91,4 +91,39 @@ Description
 
 %%       Prints % character
 
+
+
+strspn → counts characters that are in a set
+strspn(s, x) (the opposite)
+Count characters from the start of s that are ONLY from x.
+
+strcspn → counts characters that are NOT in a set
+strcspn(s, x)
+Count characters from the start of s until you hit ANY character from x.
+
+    Bug 2: fgets keeps the newline
+fgets(item, sizeof(item), stdin);
+If you type:
+Laptop
+item actually becomes:
+"Laptop\n"
+That newline will show up later when printing or formatting.
+    Simple cleanup (optional but good)
+
+item[strcspn(item, "\n")] = '\0';
+
+    Real bug: item[strlen(item) - 1] = '\0';
+This can crash.
+If:
+the user just presses Enter, or
+fgets reads a full line without \n
+then:
+strlen(item) - 1 can become -1 or chop a valid character.
+That’s undefined behavior.
+    Correct, safe way
+Only remove \n if it exists:
+
+item[strcspn(item, "\n")] = '\0';
+
+This is the canonical C solution. Burn it into muscle memory.
 */
