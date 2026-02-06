@@ -57,5 +57,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "editor.mouseWheelZoom": true,
-  "terminal.integrated.mouseWheelZoom": true
+  "terminal.integrated.mouseWheelZoom": true,
+  "C_Cpp.hover": "disabled",
+  "C_Cpp.intelliSenseEngine": "Disabled"
 }

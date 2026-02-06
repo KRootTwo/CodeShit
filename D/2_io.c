@@ -38,7 +38,7 @@ int main() {
 
     printf("\nName: %s\nAge: %d\nGPA: %.2f\nGrade: %c\nBitch-id: %d\nBitch-char: %c", name, age, gpa, grade, c, bid);
 
-
+    
     return 0;
 }
 

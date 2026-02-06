@@ -19,6 +19,7 @@ int main () {
     printf("Entre name: ");
     scanf("%49s", name);
     printf("Entre pet name: ");
+    
     getchar();
     fgets(pname, sizeof(pname), stdin);
     pname[strcspn(pname, "\n")] = '\0';
@@ -27,6 +28,7 @@ int main () {
     scanf(" %c", &bid);
 
     printf("age: %d\ngpa: %.1f\ngrade: %c\nname: %s\npet name: %s\nbid: %c\n",age, gpa, grade, name, pname, bid);
+
 
     return 0;
 }
