@@ -106,7 +106,7 @@ int main() {
                 printf("\nInvalid Opertor choose between (0 - 8)\n");
         
         }
-        if (v) printf("Result: %.4f\n\n", res);
+        if (v) printf("\nResult: %.4f\n\n", res);
     }
 
   return 0;
