@@ -6,8 +6,8 @@ public class Dfg {
 		int b = 2;
 		boolean c = true;
 
-		System.out.println();
-		System.out.println();
+		System.out.println(a + b);
+		System.out.println(c);
 		
 		
 	}
