@@ -2,15 +2,15 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Car {
+	private final int year; 
+	private final Color color;
 	private final String name;
 	private final String model;
-	private final int year; 
-	private String engine;
 	private final float maxSpeed;
-	private boolean isDrivable;
-	private final Color color;
+	private String engine;
 	private float currentFuel;
 	private boolean isRunnin = false;
+	private boolean isDrivable = true;
 	
 	public enum Color {
 		White, Arctic_Grey, Pyro_Red, Black, Guards_Red, 
@@ -38,8 +38,16 @@ public class Car {
 		System.out.println("isDrivable: " + isDrivable);
 	}
 	public void addFuel(float n) {
-		currentFuel += n;
-		saveFuel();
+		if (currentFuel < 90) {
+			if (currentFuel + n < 90) {
+				currentFuel += n;
+			}
+			else {
+				currentFuel = 90;
+				System.out.println("Tank Full.");
+			}
+		}
+				saveFuel();
 	}
     public void swapEngine(String s) {
         engine = s;
@@ -47,6 +55,9 @@ public class Car {
 	public void chkbrkdwn() {
 		int x = (int) ((Math.random() * 9) + 1);
 		if (x == 5) {
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {}
 			System.out.println("Brrrr...voooshh. Think there's a breakdown mate.");
 			isDrivable = false;
 			isRunnin = false;
@@ -54,20 +65,20 @@ public class Car {
 	}
 	public void saveFuel() {
 		try {
-			FileWriter fw = new FileWriter("fuel.txt");
-			fw.write(String.valueOf(currentFuel));
-			fw.close();
+            	try (FileWriter fw = new FileWriter("fuel.txt")) {
+                    fw.write(String.valueOf(currentFuel));
+                }
 		} catch (IOException e) {
 			System.out.println("Error saving file.");
 		}
 	}
-	public void loadFuel() {
+	private void loadFuel() {
 		try {
 			File f = new File("fuel.txt");
 			if (f.exists()) {
-				Scanner blehh = new Scanner(f);
-				currentFuel = Float.parseFloat(blehh.nextLine());
-				blehh.close();
+				try (Scanner blehh = new Scanner(f)) {
+					currentFuel = Float.parseFloat(blehh.nextLine());
+				}
 			}
 		} catch (IOException e) {
 			System.out.println("Error loading fuel");
@@ -79,13 +90,15 @@ public class Car {
 	}
 	public Car start() {
 		if (isDrivable) {
-		chkbrkdwn();
-		}
-		if (isDrivable) {
 			if (currentFuel <= 0) System.out.println("No fuel, mate.");
 			else if (currentFuel < 5) System.out.println("Low fuel. In reserved mode. Add fuel");
 			else {
 				System.out.println("Injecting fuel... Starting engine...");
+				chkbrkdwn();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+				}
 				if (isDrivable) {
 					isRunnin = true;
 					System.out.println("Car Started.");
@@ -98,36 +111,34 @@ public class Car {
 	}
 	public Car drive() {
 		if (isRunnin) {
-			System.out.println("Enjoy the ride blud...");
+			System.out.println("Here we goooo...");
+			animateCar();
 			currentFuel -= 2;
 		} else {
-			System.out.println("Start the car first.");
+			if (!isDrivable) System.out.println("Car is broken.");
+			else System.out.println("Start the car first.");
 		}
 		saveFuel();
 		return this;
 	}
-}
+	public void animateCar() {
+		try {
+			for (int pos = 0; pos < 40; pos++) {
 
-/**
- * 	public String getName() {
-		return name;
+				System.out.print("\033[H\033[2J");
+				System.out.flush();
+
+				String s = " ".repeat(pos);
+
+				System.out.println(s + "   ______");
+				System.out.println(s + "  /|_||_\\`.__");
+				System.out.println(s + " (   _    _ _\\");
+				System.out.println(s + "=`-(_)--(_)-'");
+
+				Thread.sleep(100);
+			}
+		} catch (InterruptedException e) {
+		}
+
 	}
-	public String getModel() {
-		return model;
-	}
-	public int getYear() {
-		return year;
-	}
-	public String getEngine() {
-		return engine;
-	}
-	public float getMaxSpeed() {
-		return maxSpeed;
-	}
-	public boolean isisDrivable() {
-		return isDrivable;
-	}
-	public Color getColor() {
-		return color;
-	}
- */
+}
