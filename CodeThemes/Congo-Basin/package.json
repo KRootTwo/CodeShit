@@ -1,0 +1,23 @@
+{
+    "name": "vtk-congobasin",
+    "displayName": "VTK Congo Basin",
+    "publisher": "ktv",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://example.com"
+    },
+    "engines": {
+        "vscode": ">=1.95.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "VTK Congo Basin",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Congo-Basin.json"
+            }
+        ]
+    }
+}

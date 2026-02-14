@@ -1,0 +1,27 @@
+deep forest -       VTK-Congo-Basin
+vira graphene -     VTK-Siberian-Shield
+vira ocean -        VTK-Norwegian-Fjord Night
+vira palenight -    VTK-Atacama-Twilight
+vira teal -         VTK-Fiji-Coral-Atoll
+vira carbon -       VTK-Antarctic-Polar-Night
+
+vtk-congo-basin
+vtk-siberian-shield
+vtk-norwegian-fjord-night
+vtk-atacama-twilight
+vtk-fiji-coral-atoll
+vtk-antarctic-polar-night
+
+Congo Basin
+Siberian Shield
+Norwegian Fjord Night
+Atacama Twilight
+Fiji Coral Atoll
+Antarctic Polar Night
+
+congo basin
+siberian shield
+norwegian fjord night
+atacama twilight
+fiji coral atoll
+antarctic polar night
