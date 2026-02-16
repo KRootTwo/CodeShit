@@ -1,0 +1,20 @@
+vtk-icons-congo-basin
+vtk-icons-siberian-shield
+vtk-icons-norwegian-fjord-night
+vtk-icons-atacama-twilight
+vtk-icons-fiji coral-atoll
+vtk-icons-antarctic-polar-night
+
+vira Deepforest -   VTK-Congo-Basin
+vira Graphene -     VTK-Siberian-Shield
+vira Ocean -        VTK-Norwegian-Fjord-Night
+vira Palenight -    VTK-Atacama-Twilight
+vira Teal -         VTK-Fiji-Coral-Atoll
+vira Carbon -       VTK-Antarctic-Polar-Night
+
+VTK Icons Congo Basin
+VTK Icons Siberian Shield
+VTK Icons Norwegian Fjord Night
+VTK Icons Atacama Twilight
+VTK Icons Fiji Coral Atoll
+VTK Icons Antarctic Polar Night

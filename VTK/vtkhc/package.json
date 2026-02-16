@@ -1,0 +1,94 @@
+{
+  "name": "vtk-themes",
+  "displayName": "VTK Themes",
+  "publisher": "KTV",
+  "description": "\"They don't own colors\" - Sun Tzu",
+  "icon": "ktv.jpeg",
+  "version": "0.0.3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://example.com"
+  },
+  "engines": {
+    "vscode": ">=1.95.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "VTK Fiji Coral Atoll",
+        "path": "./themes/VTK-Fiji-Coral-Atoll.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Siberian Shield",
+        "path": "./themes/VTK-Siberian-Shield.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Atacama Twilight",
+        "path": "./themes/VTK-Atacama-Twilight.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Norwegian Fjord Night",
+        "path": "./themes/VTK-Norwegian-Fjord-Night.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Congo Basin",
+        "path": "./themes/VTK-Congo-Basin.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Antarctic Polar Night",
+        "path": "./themes/VTK-Antarctic-Polar-Night.json",
+        "uiTheme": "vs-dark"
+      },
+
+      
+
+      {
+        "label": "VTKHC Fiji Coral Atoll",
+        "path": "./hcthemes/VTK-Fiji-Coral-Atoll-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Siberian Shield",
+        "path": "./hcthemes/VTK-Siberian-Shield-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Atacama Twilight",
+        "path": "./hcthemes/VTK-Atacama-Twilight-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Norwegian Fjord Night",
+        "path": "./hcthemes/VTK-Norwegian-Fjord-Night-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Congo Basin",
+        "path": "./hcthemes/VTK-Congo-Basin-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Antarctic Polar Night",
+        "path": "./hcthemes/VTK-Antarctic-Polar-Night-HC.json",
+        "uiTheme": "vs-dark"
+      }
+
+    ]
+  }
+}
