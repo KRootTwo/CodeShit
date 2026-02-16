@@ -1,0 +1,148 @@
+{
+  "name": "vtk-themes",
+  "displayName": "VTK Themes",
+  "publisher": "KTV",
+  "description": "\"They don't own colors\" - Sun Tzu",
+  "icon": "ktv.jpeg",
+  "version": "0.0.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://example.com"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "VTK Fiji Coral Atoll",
+        "path": "./themes/VTK-Fiji-Coral-Atoll.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Siberian Shield",
+        "path": "./themes/VTK-Siberian-Shield.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Atacama Twilight",
+        "path": "./themes/VTK-Atacama-Twilight.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Norwegian Fjord Night",
+        "path": "./themes/VTK-Norwegian-Fjord-Night.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Congo Basin",
+        "path": "./themes/VTK-Congo-Basin.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTK Antarctic Polar Night",
+        "path": "./themes/VTK-Antarctic-Polar-Night.json",
+        "uiTheme": "vs-dark"
+      },
+
+      
+
+      {
+        "label": "VTKHC Fiji Coral Atoll",
+        "path": "./themes/VTK-Fiji-Coral-Atoll-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Siberian Shield",
+        "path": "./themes/VTK-Siberian-Shield-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Atacama Twilight",
+        "path": "./themes/VTK-Atacama-Twilight-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Norwegian Fjord Night",
+        "path": "./themes/VTK-Norwegian-Fjord-Night-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Congo Basin",
+        "path": "./themes/VTK-Congo-Basin-HC.json",
+        "uiTheme": "vs-dark"
+      },
+
+      {
+        "label": "VTKHC Antarctic Polar Night",
+        "path": "./themes/VTK-Antarctic-Polar-Night-HC.json",
+        "uiTheme": "vs-dark"
+      }
+
+    ],
+    "iconThemes": [
+      {
+        "id": "vtk-icons-fiji coral-atoll",
+        "label": "VTK Icons Fiji Coral Atoll",
+        "path": "./themes/VTK-Icons-Fiji-Coral-Atoll.json",
+        "_watch": true
+      },
+      {
+        "id": "vtk-icons-siberian-shield",
+        "label": "VTK Icons Siberian Shield",
+        "path": "./themes/VTK-Icons-Siberian-Shield.json",
+        "_watch": true
+      },
+      {
+        "id": "vtk-icons-atacama-twilight",
+        "label": "VTK Icons Atacama Twilight",
+        "path": "./themes/VTK-Icons-Atacama-Twilight.json",
+        "_watch": true
+      },
+      {
+        "id": "vtk-icons-norwegian-fjord-night",
+        "label": "VTK Icons Norwegian Fjord Night",
+        "path": "./themes/VTK-Icons-Norwegian-Fjord-Night.json",
+        "_watch": true
+      },
+      {
+        "id": "vtk-icons-congo-basin",
+        "label": "VTK Icons Congo Basin",
+        "path": "./themes/VTK-Icons-Congo-Basin.json",
+        "_watch": true
+      },
+      {
+        "id": "vtk-icons-antarctic-polar-night",
+        "label": "VTK Icons Antarctic Polar Night",
+        "path": "./themes/VTK-Icons-Antarctic-Polar-Night.json",
+        "_watch": true
+      }
+    ],
+    "productIconThemes": [
+      {
+        "id": "VTKUIIcons",
+        "label": "VTK UI Icons",
+        "path": "./themes/VTK-Icons-Def.json"
+      }
+    ],
+    "icons": {
+      "vira-logo": {
+        "description": "vtk icon",
+        "default": {
+          "fontPath": "./assets/vira-ui-icons.woff2",
+          "fontCharacter": "\\f106"
+        }
+      }
+    }
+  }
+}
