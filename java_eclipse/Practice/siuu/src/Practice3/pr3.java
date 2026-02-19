@@ -36,8 +36,7 @@ public class pr3 {
 		return true;
 	}
 	public static boolean amic(int a, int b) {
-		if (factSum(a) == b && factSum(b) == a) return true;
-		return false;
+		return factSum(a) == b && factSum(b) == a;
 	}
 	public static void pat6c(int n) {
 		for (int i = 1; i <= n; i++) {
