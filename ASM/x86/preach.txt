@@ -1,0 +1,23 @@
+| Register | Purpose (rough idea)                  |
+| -------- | ------------------------------------- |
+| **EAX**  | accumulator (syscall number, results) |
+| **EBX**  | base (argument 1)                     |
+| **ECX**  | counter (loops, arg2)                 |
+| **EDX**  | data (arg3)                           |
+| **ESI**  | source index                          |
+| **EDI**  | destination index                     |
+| **EBP**  | base pointer (stack frame)            |
+| **ESP**  | stack pointer                         |
+
+Special Registers
+| Register   | What it does                                |
+| ---------- | ------------------------------------------- |
+| **EIP**    | instruction pointer (where code is running) |
+| **EFLAGS** | flags (zero, carry, etc.)                   |
+
+
+| eax value | syscall |
+| --------- | ------- |
+| 1         | exit    |
+| 4         | write   |
+| 3         | read    |
