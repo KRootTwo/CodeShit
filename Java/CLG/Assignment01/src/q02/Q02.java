@@ -28,7 +28,7 @@ public class Q02 {
     }
     public static void main(String[] args) {
         Scanner blehh = new Scanner(System.in);
-        System.out.print("Enter Height(kg) & Weight(m): ");     
+        System.out.print("Enter Height(m) & Weight(kg): ");     
         float h = blehh.nextFloat();
         float w = blehh.nextFloat();
         System.out.println("You're " + bmi(bmiC(h, w)));

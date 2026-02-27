@@ -1,5 +1,4 @@
-// Write a Java program that outputs all possible strings formed by using the characters 'c', 'a', 'r',
-// 'b', 'o', and 'n' exactly once.
+// Write a Java program that outputs all possible strings formed by using the characters 'c', 'a', 'r',+'b', 'o', and 'n' exactly once.
 public class Q04 {
     public static void main(String[] args) {
         String s = "carbon";

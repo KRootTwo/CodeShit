@@ -1,10 +1,8 @@
-
-import java.util.Scanner;
-
 // Write a Java method, isOdd( ), that takes an int i and returns true if and only if i is odd. Your
 // method can't use the multiplication, modulus, or division operators, The method signature is
 // as follows.
 // public static boolean isOdd(int n)
+import java.util.Scanner;
 public class Q06 {
     public static boolean isOdd(int i) {
         return ((i & 1) == 1);
