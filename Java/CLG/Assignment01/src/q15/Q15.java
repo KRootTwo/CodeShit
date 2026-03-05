@@ -1,8 +1,6 @@
-
-import java.util.Arrays;
-
 // Write a java program that randomly fills in 0s and 1s into a 4-by-4 matrix, prints the matrix,
 // and finds the first row and column with the most 1s.
+import java.util.Arrays;
 public class Q15 {
     public static int max(int a[]) {
         int id = 0, m = a[0];

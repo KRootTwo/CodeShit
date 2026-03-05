@@ -13,7 +13,7 @@ public class Q12 {
             if (s.strip().equalsIgnoreCase("end")) {
                 break;
             }
-            arr[c] = s; // store once
+            arr[c] = s;
             c++;
         }
         for (int j = c - 1; j >= 0; j--) {

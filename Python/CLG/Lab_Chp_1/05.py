@@ -18,9 +18,23 @@
 # Each input must map to only ONE output
 
 A = [1, 2, 3]
-h = {(1, 1), (1, 2), (2, 2), (2, 1), (3, 3)}
+H = {(1, 1), (2, 1), (3, 3)}
+#     i  j    x  y
 
-def is_func (rel) :
-    return all(j == k or i != k for (i, j) in rel for (k, l) in rel)
+D = {(1, 1), (2, 2), (3, 3)}
+#     i  j    x  j
 
-print (is_func(h))
+
+def is_func (R) :
+    return all (j == y or i != x for (i, j) in R for (x, y) in R)
+
+def is_injt (R) :
+    return all (i == x or j != y for (i, j) in R for (x, y) in R)
+
+def is_surt (R, S) :
+    return all (any (y == i for (x, y) in R) for i in B)
+    
+
+print (is_func(H))
+print (is_func(D))
+print (is_injt(D))

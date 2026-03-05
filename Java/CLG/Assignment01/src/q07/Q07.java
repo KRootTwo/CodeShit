@@ -31,7 +31,7 @@ public class Q07 {
                 return i + 1;
             }
         }
-        return -1; // not found
+        return -1;
     }
     public static int Locc(int[] a, int n) {
         for (int i = a.length - 1; i >= 0; i--) {
@@ -39,7 +39,7 @@ public class Q07 {
                 return i + 1;
             }
         }
-        return -1; // not found
+        return -1;
     }
     public static void main(String[] args) {
         Scanner blehh = new Scanner(System.in);
