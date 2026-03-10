@@ -1,0 +1,198 @@
+Alright KTV, here are progressive exercises that combine structs + pointers + functions + malloc. If you do these in order, your C fundamentals will get solid fast. 💪
+
+I'll go from easy → medium → harder.
+
+🟢 Exercise 1 — Struct Initialization (Warm-up)
+
+Create this struct:
+
+struct Student {
+    char name[50];
+    int id;
+    float grade;
+};
+Tasks
+
+Write a function:
+
+void init_student(struct Student *s)
+
+Set:
+
+name = "Alice"
+id = 100
+grade = 9.5
+
+Write a function:
+
+void print_student(struct Student *s)
+
+In main():
+
+create a Student
+
+call init_student
+
+call print_student
+
+Goal: practice struct pointers (->)
+
+🟡 Exercise 2 — Array of Structs
+
+Make a static array:
+
+struct Student students[3];
+
+Write a function:
+
+void fill_student(struct Student *s)
+
+It should ask the user for:
+
+name
+id
+grade
+
+Then:
+
+for each student
+    call fill_student
+
+Then print all students.
+
+Goal: practice:
+
+students[i]
+&students[i]
+🟡 Exercise 3 — Dynamic Array (malloc)
+
+Now make the array dynamic.
+
+Steps:
+
+Ask user:
+
+How many students?
+
+Allocate memory:
+
+struct Student *students = malloc(n * sizeof(struct Student));
+
+Fill them.
+
+Print them.
+
+Free memory.
+
+Goal: combine:
+
+malloc
+struct arrays
+pointer indexing
+🟠 Exercise 4 — Find Something
+
+Add a function:
+
+struct Student* find_student(struct Student *arr, size_t n, int id)
+
+It should:
+
+search student with that ID
+return pointer to student
+return NULL if not found
+
+Example usage:
+
+Student *s = find_student(students, n, 100);
+
+if (s)
+    print_student(s);
+else
+    printf("Not found\n");
+
+Goal: understand returning pointers.
+
+🔴 Exercise 5 — Modify Through Pointer
+
+Write:
+
+void curve_grades(struct Student *arr, size_t n, float amount)
+
+Add amount to every grade.
+
+Example:
+
+curve_grades(students, n, 0.5);
+
+Goal: modifying array through pointer.
+
+🔴 Exercise 6 — Best Student
+
+Write a function:
+
+struct Student* best_student(struct Student *arr, size_t n)
+
+Return the student with the highest grade.
+
+Goal: return pointer to struct inside array.
+
+🔴 Exercise 7 — Dynamic Name (Harder)
+
+Change struct to:
+
+struct Student {
+    char *name;
+    int id;
+    float grade;
+};
+
+Now:
+
+name must be allocated with malloc
+
+Example:
+
+s->name = malloc(strlen(input)+1);
+strcpy(s->name, input);
+
+And don't forget:
+
+free(s->name)
+
+Goal: malloc inside structs.
+
+🔥 Bonus Challenge (Very Good Practice)
+
+Build a simple contact list.
+
+Struct:
+
+struct Contact {
+    char name[50];
+    char phone[20];
+};
+
+Program:
+
+1 add contact
+2 list contacts
+3 search contact
+4 exit
+
+Store contacts dynamically with malloc.
+
+This combines everything you've been learning.
+
+🧠 Pro Tip While Practicing
+
+When working with struct pointers remember:
+
+p->field
+
+is the same as
+
+(*p).field
+
+But -> is cleaner.
+
+If you want, I can also give you one mini-project that combines EVERYTHING you've learned so far in C (arrays, structs, pointers, malloc, CLI input). It's a really good milestone project.

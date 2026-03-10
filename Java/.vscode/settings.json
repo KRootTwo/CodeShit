@@ -28,5 +28,9 @@
     "editor.inlineSuggest.experimental.emptyResponseInformation": false,
     "editor.inlayHints.enabled": "off",
     "editor.wordWrap": "on",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoIndent": "full",
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false
 }

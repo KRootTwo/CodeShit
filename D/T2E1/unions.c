@@ -7,9 +7,14 @@
 struct emp {
     int id;
     char fn[64];
-    char ln[64];
+    char ln[64];  
     float income;
     bool ismanager;
+};
+
+union u {
+    int x;
+    char c;
 };
 
 int main () {
@@ -17,6 +22,12 @@ int main () {
     struct emp emps[max_employee];
 
     for (int i = 0; i < max_employee; i++) {
+        emps[i].income = 0;
+        emps[i].ismanager = false;
+    }
+    for (int j = 0; j < max_employee; j++) {
+        printf("%d\n", emps[j].id);
+        printf("%d\n", emps[j].ismanager);
     }
 
     return 0;

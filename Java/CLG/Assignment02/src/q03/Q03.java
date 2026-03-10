@@ -1,44 +1,34 @@
-//  In a super market each product is having minimum details like prodId, price, quantity
-// that is used during the biling process. Keeping this in mind prepare a class named as
-// Product having the member variables
-//  prodId, price, quantity
-//  a static variable totalPrice
-// Initialize the value of product through parameterized constructor. It consists of a
-// display() method to display the value of instance variables. A person went to market
-// and purchase 5 different products. Using the above mentioned class, display the details
-// of products that the person has purchased. Also, determine how much total amount
-// the person will pay for the purchase of 5 products.
-class Product {
-    String prodId;
-    float price;
+class Book {
+    int bookId;
+    double price;
     int quantity;
-    static float totalPrice;
+    static double totalAmount;
 
-    public Product(String prodId, float price, int quantity) {
-        this.prodId = prodId;
+    Book(int bookId, double price, int quantity) {
+        this.bookId = bookId;
         this.price = price;
         this.quantity = quantity;
-        totalPrice += (price * quantity);
+        totalAmount += quantity;
     }
-    public void display() {
-        System.out.println("Poduct ID - " + prodId);
-        System.out.printf("Price - %.2f\n", price);
-        System.out.println("Quantity - " + quantity);
-        System.out.printf("Total Price - %.2f\n", totalPrice);
-        System.out.println();
+
+    void displayDetails() {
+        System.out.println("Book ID: " + this.bookId);
+        System.out.println("Price: " + this.price);
+        System.out.println("Quantity: " + this.quantity);
+        System.out.println("Total Amount: " + totalAmount);
     }
 }
 class Q03 {
     public static void main(String[] args) {
-        Product p1 = new Product("Book", 67.4f, 2);
-        p1.display();
-        Product p2 = new Product("Pen", 9.99f, 5);
-        p2.display();
-        Product p3 = new Product("Pencil", 4.55f, 3);
-        p3.display();
-        Product p4 = new Product("Eraser", 3.99f, 2);
-        p4.display();
-        Product p5 = new Product("Ink", 12.34f, 1);
-        p5.display();
+        Book b[] = new Book[5];
+        b[0] = new Book(1243, 67.08, 2);
+        b[1] = new Book(1293, 69.99, 3);
+        b[2] = new Book(4334, 34.07, 4);
+        b[3] = new Book(8256, 200.98, 1);
+        b[4] = new Book(0762, 219.87, 3);
+        for (int i = 0; i < b.length; i++) {
+            b[i].displayDetails();
+            System.out.println();
+        }
     }
 }
