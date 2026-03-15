@@ -71,9 +71,9 @@ echo $?**
 ## **Register representation**
 
 EBX (32 bits)
-└── BX (lower 16 bits)
-    ├── BH (high 8 bits)
-    └── BL (low 8 bits)
+├── BX (lower 16 bits)
+├── BH (high 8 bits)
+└── BL (low 8 bits)
 
 
 | reg | repr           | size(bits) |

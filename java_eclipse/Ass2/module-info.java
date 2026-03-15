@@ -1,0 +1,3 @@
+
+module Ass2 {
+}

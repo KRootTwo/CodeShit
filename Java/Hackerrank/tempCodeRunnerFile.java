@@ -1,0 +1,1 @@
+if (x < s.length) s[x] = '0';
