@@ -98,7 +98,7 @@ int main() {
     // close file pointer
     fclose(fp);
 
-    // display
+    // display`
     dispStore(i, l);
     purchase(i, l);
 
@@ -115,8 +115,10 @@ int main() {
     }
     char filename[50];
     sprintf(filename, "/home/ktv/CodeShit/D/genRec/Rs/reciept_%d.txt", g++);
+    rewind(fp2);
+    fprintf(fp2, "%d", g);
 
-    // receipt
+    // receipt generation
     FILE *fp3 = fopen(filename, "w");
     fprintf(fp3, "%28s", "RECEIPT\n");
 
