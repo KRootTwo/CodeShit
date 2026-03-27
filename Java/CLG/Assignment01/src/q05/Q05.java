@@ -18,6 +18,6 @@ public class Q05 {
         return s;
     }
     public static void main(String[] args) {
-        System.err.println("Sum of Digits: " + sum_Of_Digits(9294));
+        System.out.println("Sum of Digits: " + sum_Of_Digits(9294));
     }
 }

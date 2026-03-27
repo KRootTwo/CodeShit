@@ -1,0 +1,9 @@
+Make a database typeshit in java. have an idea. just give me hints i don't want no code. I wanna create a class Frd where i need instance vars {int slNo, String name, tier(enum) x, String id(unique), String addInfo, long phNo} i wanna store them in a file. idk what kind of file cuz idk what type of file would be best for this project also can read & write with java i want that too.
+
+1. store files in a data folder in the project path. it'll be in git & github so np.
+2. file wont exist only the first time i'll handle that ez
+3. auto increment sl no. easy. make another txt file containig current sl no. increment that
+4. hell yeah they can have same name but id & sl are diff so np
+5. no way they can have same ph no. what is this 1990?
+6. id. i have an excellent idea for id. if i have an id in mind i'll just write it or generate with the hashset code earlier. for dupes have to check all ids could be a possible headache give hints
+7. deleting... hmm haven't thought about it hints plz

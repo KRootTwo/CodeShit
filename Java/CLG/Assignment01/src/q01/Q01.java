@@ -8,7 +8,7 @@ public class Q01 {
         int c = 0;
         while (n > 2) {
             n /= 2;
-            c++;
+            c = c + 1;
         }
         return c;
     }
