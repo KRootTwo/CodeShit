@@ -1,4 +1,3 @@
-package main;
 
 public enum Tier {
 	O (0, "Origins"),
@@ -9,8 +8,8 @@ public enum Tier {
 	L (5, "Alien");
 	
 	// Vars
-	private int level;
-	private String info;
+	private final int level;
+	private final String info;
 	
 	// Constructor
 	Tier(int level, String info) {

@@ -1,4 +1,3 @@
-package main;
 
 public class Frd {
 	private final String name;
@@ -10,7 +9,7 @@ public class Frd {
 	private String addInfo;
 	private boolean isDeleted;
 
-	Frd(int slNo, String name, String id, Tier tier, long phNo, String info) {
+	public Frd(int slNo, String name, String id, Tier tier, long phNo, String info) {
 		this.name = name;
 		this.slNo = slNo;
 		this.phNo = phNo;
@@ -103,6 +102,7 @@ public class Frd {
 
 		return f;
 	}
+
 }
 
 
