@@ -1,0 +1,144 @@
+What is happening here (step-by-step)
+
+Assume a CSV line like:
+
+1,Pen,10.50
+
+After this earlier line:
+
+i[n].id = atoi(strtok(line, ","));
+
+Now strtok(NULL, ",") gives:
+
+"Pen"
+
+So:
+
+char *name = strtok(NULL, ",");
+
+Now:
+
+name → "Pen"
+
+But IMPORTANT: This "Pen" is inside the line buffer.
+
+And line gets reused every loop by fgets.
+
+So next iteration:
+
+2,Pencil,5.00
+
+Now line becomes:
+
+"2,Pencil,5.00"
+
+So the previous "Pen" is overwritten.
+
+If you did this:
+
+i[n].name = name;
+
+Then all your struct names would point to the same buffer → and all names become the last line read.
+
+That’s a very common beginner bug.
+
+So what are we doing instead?
+
+We copy the string into new memory.
+
+i[n].name = malloc(strlen(name) + 1);
+
+Why +1?
+
+Because strings end with:
+
+'\0'  (null terminator)
+
+So "Pen" is actually:
+
+P e n \0
+
+Length = 3 → need 4 bytes → strlen(name) + 1
+
+Then:
+
+strcpy(i[n].name, name);
+
+So now memory looks like:
+
+Heap
+----
+i[0].name → "Pen"
+i[1].name → "Pencil"
+i[2].name → "Eraser"
+
+Each name has its own memory.
+
+Visual Memory Diagram
+Without malloc (WRONG)
+line buffer → "Pen"
+i[0].name ──┘
+
+line buffer → "Pencil"
+i[0].name ──┐
+i[1].name ──┘
+
+Result:
+i[0].name = "Pencil"
+i[1].name = "Pencil"
+
+Everything overwritten.
+
+With malloc (CORRECT)
+Heap:
+i[0].name → "Pen"
+i[1].name → "Pencil"
+i[2].name → "Eraser"
+
+Independent copies.
+
+So the pattern to remember forever:
+When reading strings in a loop:
+
+char buffer[100];
+
+while (read...) {
+    char *temp = some_function(buffer);
+    
+    arr[i] = malloc(strlen(temp) + 1);
+    strcpy(arr[i], temp);
+}
+This is a very standard C pattern.
+
+And that's why later you free:
+for (size_t k = 0; k < l; k++) {
+    free(i[k].name);
+}
+Because each name was individually allocated.
+If you don’t free → memory leak.
+
+One small improvement (pro tip)
+Instead of:
+i[n].name = malloc(strlen(name) + 1);
+strcpy(i[n].name, name);
+
+You can write:
+i[n].name = strdup(name); // strdup = allocate + copy.
+
+Same thing in one line.
+(Just remember to free() later.)
+The Big Idea Behind All This
+
+This is the key concept:
+Buffers are temporary
+Heap memory is permanent (until you free it)
+So whenever data must persist after loop/function, you malloc and copy.
+
+
+
+
+| Type           | Memory    | Can modify string? | Can change pointer? |
+| -------------- | --------- | ------------------ | ------------------- |
+| `char *`       | Read-only |        ❌          |         ✅          |
+| `const char *` | Read-only |        ❌          |         ✅          |
+| `char []`      | Stack     |        ✅          |         ❌          |
