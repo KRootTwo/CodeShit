@@ -9,7 +9,7 @@ public class Q15 {
                 id = i;
             }
         }
-        return id;
+        return id + 1;
     }
     public static void fillOZ(int a[][]) {
         for (int i = 0; i < a.length; i++) {
@@ -33,7 +33,7 @@ public class Q15 {
         int x[] = new int[4];
         for (int i = 0; i < a.length; i++) {
             int c = 0;
-            for (int j = 0; j < a.length; j++) {
+            for (int j = 0; j < a[0].length; j++) {
                 if (a[j][i] == 1) c++;
             }
             x[i] = c;

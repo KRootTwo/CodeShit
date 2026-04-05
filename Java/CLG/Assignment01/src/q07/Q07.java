@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Q07 {
     public static int max(int a[]) {
         int mx = a[0];
-        for (int i : a) {
-            if (i > mx) mx = i;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > mx) mx = i;
         }
         return mx;
     }

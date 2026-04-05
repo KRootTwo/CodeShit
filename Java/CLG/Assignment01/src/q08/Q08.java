@@ -23,11 +23,15 @@ public class Q08 {
     public static void main(String[] args) {
         Scanner blehh = new Scanner(System.in);
         System.out.print("Enter no. of rows & columns of 2D Array: ");
+
         int arr[][] = new int[blehh.nextInt()][blehh.nextInt()];
+
         System.out.print("Enter elements: ");
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
+
                 arr[i][j] = blehh.nextInt();
+                
             }
         }
         prntArr(arr);
