@@ -13,14 +13,15 @@ public class Main {
 		ImageIcon img = new ImageIcon("sw.png");
 		
 		JLabel label = new JLabel();  // Create a label
-		label.setText("Siuuu");  // Set text
-		label.setIcon(img);
+//		label.setText("Siuuu");  // Set text
+//		label.setIcon(img);
 		
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1080, 720);
 		frame.setResizable(true);
 		frame.setVisible(true);
+		frame.setTitle("Sup Fuck Nigga");
 		frame.getContentPane().setBackground(Color.black);
 		
 		frame.add(label);
