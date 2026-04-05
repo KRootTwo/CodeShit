@@ -280,22 +280,27 @@ void show_all (Book *book, size_t s) {
     printf("\n");
     for (size_t i = 0; i < s; i++) {
         if (!book[i].isDeleted) {
-            printf("Sl No. - %d\nBookname - %s\nAuthor - %s\nCategory - %s\nBookId - %s\nTotal Pages - %d\nStart Date - %lld\n",
+            printf("Sl No. - %d\nBookname - %s\nAuthor - %s\nCategory - %s\nBookId - %s\nTotal Pages - %d\nStart Date - ",
                 book[i].sl_no,
                 book[i].book_name,
                 book[i].author,
                 category_to_string(book[i].category),
                 book[i].book_id,
-                book[i].total_pages,
-                book[i].start_date
+                book[i].total_pages
             );
+            show_date_string(book[i].start_date);
             if (book[i].isFinished) {
-                printf("Finish Date - %lld\nRating - %s\n",
-                book[i].finish_date,
-                category_to_string(book[i].category));
+                printf("Finish Date - ");
+                show_date_string(book[i].finish_date);
+                printf("Spend on book: ");
+                compare_time(get_today_long_date(), book[i].start_date);
+                printf("Rating - %s\n",
+                rating_to_string(book[i].rating));
             }
             else {
                 printf("Current Page - %d\n", book[i].current_page);
+                printf("Spend on book: ");
+                compare_time(get_today_long_date(), book[i].start_date);
             }
         }
         printf("\n");
