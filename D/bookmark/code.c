@@ -6,6 +6,9 @@
 #include <ctype.h>
 #include <time.h>
 
+#define csv_file "/home/ktv/CodeShit/D/bookmark/Data/db.csv"
+#define temp_file "/home/ktv/CodeShit/D/bookmark/Data/temp.csv"
+
 // enums
 typedef enum {
     action, non_fiction, fiction, fantasy, self_help, horror, drama, 
@@ -228,7 +231,7 @@ void load_from_csv (Book *book, size_t s, FILE *fp1, int *lastsl) {
 }
 }
 void save_to_csv (Book *book, size_t s) {
-    FILE *fp2 = fopen("/home/ktv/CodeShit/D/bookmark/Data/temp.csv", "w");
+    FILE *fp2 = fopen(temp_file, "w");
     for (size_t i = 0; i < s; i++) {
         fprintf(fp2, 
             "%d,%s,%s,%s,%s,%d,%lld,%d,%d,%d,%lld,%s\n", 
@@ -247,14 +250,47 @@ void save_to_csv (Book *book, size_t s) {
         );
     }
     fclose(fp2);
-    remove("/home/ktv/CodeShit/D/bookmark/Data/db.csv");
-    rename("/home/ktv/CodeShit/D/bookmark/Data/temp.csv",
-           "/home/ktv/CodeShit/D/bookmark/Data/db.csv");
+    remove(csv_file);
+    rename(temp_file, csv_file);
 }
-int select_book (Book *book, size_t s, const char* id) {
+void show_all_name (Book *book, size_t s) {
+    printf("\n");
     for (size_t i = 0; i < s; i++) {
-        if (strcmp(id, book[i].book_id) == 0 && !book[i].isDeleted){
-            return i;
+        if (!book[i].isDeleted) {
+            printf("Bookname - %s\nAuthor - %s\n",
+                book[i].book_name,
+                book[i].author
+            );
+        }
+        printf("\n");
+    }
+}
+int select_book (Book *book, size_t s) {
+    char buffer[100];
+    show_all_name(book, s);
+    printf("Enter bookid or book name: ");
+    getchar();
+    fgets(buffer, sizeof(buffer), stdin);
+    char id[100];
+    buffer[strcspn(buffer, "\n")] = '\0';  // remove newline
+    strcpy(id, buffer);
+
+    for (size_t i = 0; i < s; i++) {
+        if (!book[i].isDeleted) {
+            char temp1[100];
+            char temp2[100];
+
+            strcpy(temp1, book[i].book_name);
+            strcpy(temp2, book[i].book_id);
+
+            to_lower_inplace(temp1);
+            to_lower_inplace(temp2);
+            to_lower_inplace(id);
+
+            if (strcmp(id, temp2) == 0 ||
+                strcmp(id, temp1) == 0) {
+                return book[i].sl_no;
+            }
         }
     }
     return -1;
@@ -306,6 +342,7 @@ void show_all (Book *book, size_t s) {
         printf("\n");
     }
 }
+
 void show_book (Book *book, size_t s, int sl) {
     printf("\n");
     for (size_t i = 0; i < s; i++) {
@@ -456,7 +493,7 @@ int main() {
     int lastsl;
 
     // init file pointer
-    FILE *fp1 = fopen("/home/ktv/CodeShit/D/bookmark/Data/db.csv", "r");
+    FILE *fp1 = fopen(csv_file, "r");
 
     if (fp1 == NULL) {
         printf("File Not Found\n");
@@ -479,23 +516,28 @@ int main() {
 
     while (true) {
         printf("\n1. Show all books\n");
-        printf("2. Show book\n");
-        printf("3. Add book\n");
-        printf("4. Update progress\n");
-        printf("5. Delete book\n");
-        printf("6. Save & Exit\n");
+        printf("2. Get book sl\n");
+        printf("3. Show book\n");
+        printf("4. Add book\n");
+        printf("5. Update progress\n");
+        printf("6. Delete book\n");
+        printf("7. Save & Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
 
         if (choice == 1) show_all(book, s);
         else if (choice == 2) {
+            int sl = select_book(book, s);
+            printf("Here's the sl: %d\n", sl);
+        }
+        else if (choice == 3) {
             int sl;
             printf("Enter sl no: ");
             scanf("%d", &sl);
             show_book(book, s, sl);
         }
-        else if (choice == 3) add_book(&book, &s, &lastsl);
-        else if (choice == 4) {
+        else if (choice == 4) add_book(&book, &s, &lastsl);
+        else if (choice == 5) {
             int sl, page;
             printf("Enter sl no: ");
             scanf("%d", &sl);
@@ -503,13 +545,13 @@ int main() {
             scanf("%d", &page);
             update_progress(book, s, sl, page);
         }
-        else if (choice == 5) {
+        else if (choice == 6) {
             int sl;
             printf("Enter sl no: ");
             scanf("%d", &sl);
             delete_book(book, s, sl);
         }
-        else if (choice == 6) {
+        else if (choice == 7) {
             save_to_csv(book, s);
             break;
         }
