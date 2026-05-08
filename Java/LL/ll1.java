@@ -7,6 +7,7 @@ class Node {
         this.next = null;
     }
 }
+@SuppressWarnings("unused")
 class ll1 {
     public static void main(String[] args) {
         Node head = new Node(7);

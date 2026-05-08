@@ -1,0 +1,41 @@
+Core Components -
+
+1. ESP32 Development Board  (ESP32-WROOM / ESP32 DevKit V1)
+2. I2S Microphone INMP441 (recommended)
+3. I2S Audio Amplifier MAX98357A
+4. Speaker 3W / 4Ω small speaker
+
+
+Power System -
+
+5. LiPo Battery 3.7V (500mAh–2000mAh depending on size)
+6. Charging Module TP4056 (with protection circuit)
+7. Boost Converter MT3608 (if needed for stable voltage)
+8. Switch Small slide switch (power control)
+9. Push Button (For manual trigger (backup to wake word))
+10. Resistors 10kΩ (for pull-up/pull-down)
+
+
+Feedback / UI (Optional but recommended) - 
+
+11. RGB LED (WS2812B / NeoPixel) Shows states (listening, thinking, responding)
+12. Small Display OLED 0.96" (I2C)
+
+
+Connectivity & Assembly -
+
+13. Breadboard (for prototyping)
+14. Jumper wires (Male-Male, Male-Female)
+15. PCB / Perfboard (for final build)
+16. Soldering kit
+
+
+Optional Upgrades (Don’t buy at start) -
+
+Better for future on-device AI
+Better Mic
+ICS-43434 (higher quality)
+Enclosure
+3D printed case / small project box
+MicroSD Card Module
+For storing audio locally

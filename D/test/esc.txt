@@ -1,0 +1,5 @@
+\033[line;  colH	Move cursor to specific line and column (1-indexed)
+\033[line;  colf	Same as H (alternative)
+\033[nA	   		Move up n lines (relative)
+\033[nB	   		Move down n lines (relative)
+\033[K	   		Clear from cursor to end of line

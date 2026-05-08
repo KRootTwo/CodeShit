@@ -1,0 +1,34 @@
+Steps to make the function:	update_bar(int line, int percent, int bar_num)
+
+1. Vars - line_no (which line we'll draw the bar), percentage, bar_num or bar_name
+2. Print esc seq "\033[%d;{col}H, line_no" to move the cursor to that line.
+3. Print esc seq "\033[K" to clear that line.
+4. Now just draw the goddamn bar eazy af. (Don't know how to? bruhhh follow along ffs)
+	a. define a bar length. Or use the defined one.
+	b. calculate character count (formula -> ch_cnt = (percent / 100.0f) * bar_length)
+	c. use 2 for loops to print the progress chars. In gen we use '#' fo the complete
+	   part & '-' for the rest part. Use yo creativity dumbass.
+	d. fflush the screen thru fflush(stdout). (MIP) 
+
+Steps to draw multiple: 
+
+5. If u wanna do multiple bars make a function in the main fn.
+6. fist print the lines that'll go above or below it. (Priority)
+7. start a for loop from 0 to progress (100 in gen).
+8. call the update_bar fn. However for multiple bars make the col_no diff. Otherwise there
+   will be consequences.
+9. use sleep(seconds) or usleep(microseconds) or nanosleep(nanoseconds) for smooth 
+   progress. I prefer usleep(50000). Trust me it's the best.
+10. Use "\n\033[{col_cnt}B" to move the cursor down no. of columns (relative).
+
+
+Sum of the ansi esc seq:
+
+\033[line;  colH	Move cursor to specific line and column (1-indexed)
+\033[line;  colf	Same as H (alternative)
+\033[nA	    		Move up n lines (relative)
+\033[nB	    		Move down n lines (relative)
+\033[K	    		Clear from cursor to end of line
+
+	Ex. 	"\033[%d;%dH", line, col
+	or, 	"\033[%d;0H", line 	for 0th column

@@ -1,0 +1,60 @@
+******CURRICULUM VITAE**
+
+**Name:** Koustav Jana
+**Phone:** 9832585642
+**Email:** koustavdns289@gmail.com
+
+---
+
+**OBJECTIVE**
+Motivated Computer Science student specializing in Data Science, seeking opportunities to apply programming and problem-solving skills while building real-world experience.
+
+---
+
+**EDUCATION**
+Bachelor of Technology (B.Tech) in Computer Science and Engineering (Data Science)
+SOA ITER — 2026
+
+Higher Secondary (Class XII) (Science stream)
+JKKI — 2024
+
+---
+
+**SKILLS**
+
+* Programming: Java, C, Basic Python
+* Concepts: Data Structures, Algorithms (beginner level)
+* Tools: Git, VS Code
+* Other: Problem-solving, logical thinking
+
+---
+
+**PROJECTS**
+
+* **Book Tracker System (C)**
+  Built a console-based system to manage books and user input.
+* **Simple Reciept Generator (Java)**
+  Built a console-based system to generate reciepts based on user input.
+
+---
+
+**ACHIEVEMENTS**
+
+* Solved problems on coding platforms (if any, mention platform)
+* Active learner in programming and software development
+
+---
+
+**INTERESTS**
+
+* Gaming
+* Music for focus and productivity
+* Learning new technologies
+
+---
+
+**DECLARATION**
+I hereby declare that the information provided is true to the best of my knowledge.
+
+Date: 05.04.2026
+Signature:
