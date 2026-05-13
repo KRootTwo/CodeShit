@@ -20,19 +20,19 @@ class Node {
 public class Main {
 
     static Node start = null;
-    static Scanner blehh = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     public static void create(Node start) {
         System.out.print("How many nodes: ");
-        int n = blehh.nextInt();
+        int n = sc.nextInt();
 
         Node trk = Main.start;
 
         for (int i = 0; i < n; i++) {
             System.out.print("Enter reg: ");
-            int r = blehh.nextInt();
+            int r = sc.nextInt();
             System.out.print("Enter marks: ");
-            float m = blehh.nextFloat();
+            float m = sc.nextFloat();
 
             Node newNode = new Node(r, m);
 
@@ -48,10 +48,10 @@ public class Main {
     }
     public static Node InsBeg(Node start) {
         System.out.print("Enter reg: ");
-        int r = blehh.nextInt();
+        int r = sc.nextInt();
 
         System.out.print("Enter marks: ");
-        float m = blehh.nextFloat();
+        float m = sc.nextFloat();
 
         Node newNode = new Node(r, m);
 
@@ -67,10 +67,10 @@ public class Main {
     }
     public static Node InsEnd(Node start) {
         System.out.print("Enter reg: ");
-        int r = blehh.nextInt();
+        int r = sc.nextInt();
 
         System.out.print("Enter marks: ");
-        float m = blehh.nextFloat();
+        float m = sc.nextFloat();
 
         Node newNode = new Node(r, m);
         Node trk = start;
@@ -90,14 +90,14 @@ public class Main {
     public static Node InsAny(Node start) {
 
         System.out.print("Enter reg: ");
-        int r = blehh.nextInt();
+        int r = sc.nextInt();
         System.out.print("Enter marks: ");
-        float m = blehh.nextFloat();
+        float m = sc.nextFloat();
 
         Node newNode = new Node(r, m);
 
         System.out.print("Which position: ");
-        int p = blehh.nextInt();
+        int p = sc.nextInt();
 
         if (p < 0) {
             System.out.println("Invalid position");
@@ -165,7 +165,7 @@ public class Main {
         }
 
         System.out.print("Enter pos: ");
-        int p = blehh.nextInt();
+        int p = sc.nextInt();
         if (p >= size || p < 0) {
             System.out.println("Invalid position");
             return start;
@@ -195,7 +195,7 @@ public class Main {
     }
     public static void search(Node start) {
         System.out.print("Enter reg: ");
-        int r = blehh.nextInt();
+        int r = sc.nextInt();
 
         Node trk = start;
 
@@ -209,7 +209,7 @@ public class Main {
         }
 
         System.out.print("Enter new marks: ");
-        float m = blehh.nextFloat();
+        float m = sc.nextFloat();
 
         trk.mark = m;
         System.out.println("Marks updated");
@@ -288,7 +288,7 @@ public class Main {
             System.out.println("12 : Reverse");
 
             System.out.print("Enter choice: ");
-            int choice = blehh.nextInt();
+            int choice = sc.nextInt();
 
             switch (choice) {
 
