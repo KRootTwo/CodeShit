@@ -1,0 +1,7 @@
+keybinds for 
+1. duplicating line up or down
+2. open file explorer (ctrl b in vsc)
+3. open terminal 
+4. create new file
+5. movin a line up or down (alt aroow in vsc)
+6. delete word by word (ctrl backspace)
