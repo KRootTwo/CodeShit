@@ -1,6 +1,4 @@
-
 import java.util.Scanner;
-
 
 class Node {
     protected int regd_no;
@@ -15,7 +13,6 @@ class Node {
 
     
 }
-
 
 public class Main {
 
