@@ -1,0 +1,25 @@
+blehh
+cls
+which eclipse
+blehh
+reboot
+find ~/.local/share/applications /usr/share/applications -iname "*eclipse*.desktop"
+rm /home/ktv/.local/share/applications/_home_ktv_Downloads_Tarballs_eclipse-installer_.desktop
+find ~/.local/share/applications /usr/share/applications -iname "*eclipse*.desktop"
+cd ~/eclipse
+la
+..
+rm -rf ~/eclipse
+find ~/.local/share/applications /usr/share/applications -iname "*eclipse*.desktop"
+rm ~/.local/share/applications/eclipse.desktop
+update-desktop-database ~/.local/share/applications
+rm -rf ~/.eclipse
+rm -rf ~/workspace/.metadata
+find ~ -iname "*eclipse*" 2>/dev/null
+rm -rf ~/.eclipse.bak
+cls
+find ~ -iname "*eclipse*" 2>/dev/null
+rm -rf ~/.eclipse\nrm -rf ~/.p2\nrm -rf ~/.codetogether\nrm -rf ~/.oomph*
+find ~ -iname "*eclipse*" 2>/dev/null
+find ~/.local/share/applications /usr/share/applications -iname "*eclipse*.desktop"
+rm -rf ~/.codetogether

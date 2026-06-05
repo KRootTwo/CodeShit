@@ -10,8 +10,6 @@ class Node {
         this.mark = mark;
         this.next = null;
     }
-
-    
 }
 
 public class Main {

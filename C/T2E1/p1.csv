@@ -1,0 +1,24 @@
+Type,Bits,Best used for,Common examples
+
+i8,8,"Small signed values, flags, chars, small counters","-128 to 127. Temperature deltas, loop counters that stay small, enum-like values"
+
+u8,8,"Bytes, bitfields, small non-negative values","Pixel values (0-255), array indices that are tiny, raw byte data, masks"
+
+i16,16,Medium signed numbers,"Coordinates in older games, audio samples, sensor data"
+
+u16,16,Medium unsigned,"Unicode code units (sometimes), port numbers, small sizes"
+
+i32,32,Default signed integer for most code,"General calculations, loop counters, array indices (when you don't need 64-bit), return codes"
+
+u32,32,"Bit manipulation, large non-negative values","Colors (RGBA), flags (32 bits), hashes, timers, CRC"
+
+i64,64,Large signed numbers,"File sizes (sometimes), timestamps, big counters, money in cents"
+
+u64,64,"Very large sizes, bitboards, high-res timers","File offsets, nanosecond timestamps, huge arrays"
+
+
+u8  byte_value;
+i32 normal_counter;
+size_t array_size;        // preferred for sizes
+u32 color_rgba;
+u64 file_offset;

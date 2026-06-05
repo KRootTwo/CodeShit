@@ -1,30 +1,11 @@
-
 import java.util.Scanner;
-
-
-class Node {
-    protected int regd_no;
-    protected float mark;
-    protected Node next;
-    protected Node prev;
-
-    public Node(int regd_no, float mark) {
-        this.regd_no = regd_no;
-        this.mark = mark;
-        this.next = null;
-        this.prev = null;
-    } 
-}
-
-
-
 public class Main {
 
-    static Scanner in = new Scanner(System.in);
+    static Scanner in = new Scanner (System.in);
     static Node start = null;
     static Node end = null;
 
-    public static Node create(Node start, Node end) {
+    public static Node create (Node start, Node end) {
         System.out.print("How many nodes: ");
         int n = in.nextInt();
         Node trk = end;
@@ -140,7 +121,7 @@ public class Main {
         newNode.prev = trk;
         return start;
     }
-    public static Node delBeg(Node start, Node end) {
+    public static Node delBeg (Node start, Node end) {
         if (start == null) {
             return start;
         }
@@ -154,7 +135,7 @@ public class Main {
         Main.end = end;
         return start;
     }
-    public static Node delEnd(Node start, Node end) {
+    public static Node delEnd (Node start, Node end) {
         if (end == null || start == null) {
             return start;
         }
@@ -168,7 +149,7 @@ public class Main {
         Main.end = end;
         return start;
     }
-    public static Node delAny(Node start, Node end) {
+    public static Node delAny (Node start, Node end) {
         if (start == null) {
             return start;
         }
@@ -203,7 +184,7 @@ public class Main {
         trk.next = trk.next.next;
         return start;
     }
-    public static void search(Node start) {
+    public static void search (Node start) {
         if (start == null) {
             return;
         }
@@ -225,7 +206,7 @@ public class Main {
 
         trk.mark = nm;
     }
-    public static void display(Node start, Node end) {
+    public static void display (Node start, Node end) {
         for (Node trk = start; trk != null; trk = trk.next) {
             System.out.println("Reg: " + trk.regd_no);
             System.out.println("Marks: " + trk.mark);
@@ -234,9 +215,9 @@ public class Main {
     }
 
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner (System.in);
 
         while (true) {
 
@@ -282,3 +263,5 @@ public class Main {
         }
     }    
 }
+
+
