@@ -7,6 +7,10 @@ public class LL {
             this.value = value;
             this.next = null;
         }
+        public Node (int val, Node next) {
+            this.value = val;
+            this.next = next;
+        }
 
         public Node getNext() {
             return next;
@@ -32,15 +36,25 @@ public class LL {
     }
 
     public void insertRec(int val, int index) {
+        Node temp = head;
+        head = insertRec(val, index, temp);
     }
     private Node insertRec(int val, int index, Node node) {
         if (index == 0) {
-            Node t = new Node(val);
-            t.next = node.next;
-            node.next = t;
+            Node newNode = new Node(val, node);
             size++;
-            return t;
+            return newNode;
         }
         node.next = insertRec(val, index--, node.next);
+        return node;
     }
+
+    
+    // private Node insertRec(int val, int index, Node node) {
+    //     if (index == 0) {
+    //         Node newNode = new Node(val, )
+    //     }
+    // }
+    
+    
 }
