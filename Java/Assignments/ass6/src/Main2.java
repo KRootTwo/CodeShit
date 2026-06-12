@@ -24,7 +24,7 @@ public class Main2 {
             top = newNode;
             return top;
         }
-        top.next = newNode;
+        newNode.next = top;
         top = newNode;
         return top;
     }
