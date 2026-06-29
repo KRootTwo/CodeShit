@@ -69,7 +69,7 @@ int main() {
     int n = 0;
 
     // init fp
-    FILE *fp = fopen("/home/ktv/CodeShit/D/genRec/items.csv", "r");
+    FILE *fp = fopen("/home/ktv/CodeShit/C/genRec/items.csv", "r");
     if (fp == NULL) {
         printf("Error opening file nigga\n");
         return 1;
@@ -102,7 +102,7 @@ int main() {
     dispStore(i, l);
     purchase(i, l);
 
-    FILE *fp2 = fopen("/home/ktv/CodeShit/D/genRec/rC.txt", "r+");
+    FILE *fp2 = fopen("/home/ktv/CodeShit/C/genRec/rC.txt", "r+");
         if (fp2 == NULL) {
         printf("Error opening file nigga\n");
         return 1;
@@ -114,7 +114,7 @@ int main() {
         g = atoi(line);
     }
     char filename[50];
-    sprintf(filename, "/home/ktv/CodeShit/D/genRec/Rs/reciept_%d.txt", g++);
+    sprintf(filename, "/home/ktv/CodeShit/C/genRec/Rs/reciept_%d.txt", g++);
     rewind(fp2);
     fprintf(fp2, "%d", g);
 

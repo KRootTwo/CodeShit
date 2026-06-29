@@ -32,7 +32,7 @@ for x, y in f.items():
             break
     images[x] = y
 
-img_set = set([b for a, b in f.items()])
+img_set = set([b for b in f.values()])
 sur = (img_set == B)
 
 '''
