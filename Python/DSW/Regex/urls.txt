@@ -1,0 +1,11 @@
+https://www.google.com
+http://coreyms.com
+https://youtube.com
+https://www.nasa.gov
+
+
+'''
+(http|https)://[a-zA-Z0-9]*\.[a-zA-Z0-9-]*\.[a-zA-Z0-9-.]*
+https?://(www\.)?\w+\.\w+
+https?://(www\.)?(\w\.)?(\w+)(\.\w+)
+'''

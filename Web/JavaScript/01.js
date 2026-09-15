@@ -20,23 +20,24 @@ console.log(a, b, c);
 a = [1, 2, 3];
 b = a;
 
-a.pop(2);
+a.pop();        /* del from end */
 console.log(a, b);
 
-a.push(9);
+a.push(9);      
 console.log(a, b);
 
 a.unshift(7);
 console.log(a, b);
 
-a.shift(4);
+a.shift();      /* del from start */
 console.log(a, b);
 
 a.splice(2, 2)
 console.log(a, b);
 
 for (var i = 0; i < 10; i++) {
-    console.log("nigger");
+    // console.log("nigger");
 }
+
 
 
