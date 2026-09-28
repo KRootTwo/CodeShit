@@ -34,11 +34,12 @@ name = '''Manoranjan Parhi, Ashis Pati, Debashis Pandit, Meenakshi Padhi, Modi p
 
 pat = r'\b[\w\s]*P\w*i\b'
 
-print(f"{re.findall(pat, name)}")
+# print(f"{re.findall(pat, name)}")
 
 
 
-
+mat = re.search('India', 'I love my India')
+print(f"{mat}")
 
 
 

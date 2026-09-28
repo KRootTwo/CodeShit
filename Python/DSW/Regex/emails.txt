@@ -2,9 +2,10 @@
 CoreyMSchafer@gmail.com
 corey.schafer@university.edu
 corey-321-schafer@my-work.net
-
-'''
-[a-zA-Z0-9.-]+@[a-zA-Z-]+\.(com|edu|net)
-[a-zA-Z0-9_+.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
-
-'''
+avani-lekhara@soa.ac.in
+nitesh.kumar@gmail.com
+sumit_antil@yahoo.com
+HarvinderSingh@domain.org
+Dharabir@domain
+Praveen+Kumar@rediff.mail
+Navdeep@Singh.in

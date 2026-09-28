@@ -1,0 +1,10 @@
+Here are some course codes:
+
+CS101
+MA202
+PH303
+
+not valid
+
+CS1010
+MA20
