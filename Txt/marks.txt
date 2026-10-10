@@ -1,0 +1,8 @@
+Aarav: 85
+Bhavna: 90
+Chirag: 78
+Divya: 92
+Eshan: 88
+Farhan: 81
+Geeta: 95
+Harsh: 74

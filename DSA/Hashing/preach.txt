@@ -1,0 +1,46 @@
+⚝ Hash Functions:
+    1. Division Method:     
+                            h(k) = k % m
+        k -> value, m -> radom number (size of arr / prime no.)
+    
+    2. Multiplication Method:
+
+                    h(k) = [(a.k) % 2^w] >> (w - r)
+        
+            a -> random no., w = no. of bits in k, m -> 2^r
+
+        applicable when:
+            a is odd    &    2^(w - 1) < a < 2^w
+            a is not too close to 2^(w - 1) or 2^w
+        
+    3. Universal Hashing:
+
+                    h(k) = [(a.k + b) % p] % m
+            
+            a & b -> rand no. ∈ [0, 1, 2,...(p - 1)]
+                p is a large prime no.
+
+        using this prob of having same hash values for 2 diff keys
+        are: 
+                    P[h(k1) == h(k2)] = 1/m
+
+    
+⚝ Size of Table:
+    
+    table size = m = θ(n) (ALWAYS)
+
+    if m is small -> slow
+    if m is big   -> wasteful
+
+    ☉ Idea: Stat small Grow Big
+        eg.
+            start with 10
+            🛆 after filling -> double it
+
+    🛆 When u double the table, cost to insert n items = O(n)
+                                cost to insert 1 item = O(1)
+                                
+                                Amortized Constant Time ^
+
+    if m = n/2 shrink by m/2
+    🛆   Optimal -> n = m/4 -> half the size

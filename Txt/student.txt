@@ -1,0 +1,7 @@
+Aarav, 101, 85
+Bhavna, 102, 92
+Chirag, 103, 78
+Divya, 104, 88
+Eshan, 105, 95
+Farhan, 106, 80
+Geeta, 107, 91

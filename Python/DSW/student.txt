@@ -1,0 +1,7 @@
+Koustav, 10, 88
+Sourabh, 11, 92
+Suryansu, 12, 79
+Aditya, 13, 95
+Harsh, 14, 84
+Rahul, 15, 91
+Tanvir, 16, 86
