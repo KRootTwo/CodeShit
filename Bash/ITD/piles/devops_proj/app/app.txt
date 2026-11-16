@@ -1,0 +1,3 @@
+Studid Name Dept Marks
+10 abc CSE 50
+11 bsd Mech 30

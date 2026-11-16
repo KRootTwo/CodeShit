@@ -1,0 +1,19 @@
+Fields: ID, username, operation, status, execution Time
+
+(a) Write a Bash script to read the log and find:
+    1. Successful and failed operation counts for each user.
+    2. The user with the greatest total execution time for successful operations.
+    3. Users whose failures account for more than 40% of their operations.
+    4. The longest consecutive run of FAILED records, with its starting and ending IDs.
+
+(b) Write Linux command pipelines for the following:
+    1. Show the three users with the most failures; break ties alphabetically.
+    2. Find the second-highest distinct execution time for successful UPLOADs.
+    3. List users who have both a successful LOGIN and a failed UPLOAD (no duplicates).
+    4. Display the last three successful entries of users with at least two failures.
+
+(c) Write a Bash function analyze_user() that takes a username and:
+    1. Finds the average time of that user's successful entries (integer average is enough).
+    2. Checks for at least three consecutive entries of alternating SUCCESS/FAILED status.
+    3. Finds the longest run of strictly increasing execution times for that user.
+    4. Prints that user's entries in reverse order without using tac.
