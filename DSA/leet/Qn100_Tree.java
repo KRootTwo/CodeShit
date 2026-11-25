@@ -2,8 +2,9 @@ import java.util.Stack;
 
 public class Qn100_Tree {
     public static boolean isSameTreeBFS(TreeNode p, TreeNode q) {
-
-        if (p == null || q == null) return false;
+        if (p == null && q == null) return true;
+        if (p == null && q != null) return false;
+        if (q == null && p != null) return false;
 
         Stack<TreeNode> s1 = new Stack<>();
         Stack<TreeNode> s2 = new Stack<>();
@@ -11,15 +12,21 @@ public class Qn100_Tree {
         s1.push(p); s2.push(q);
 
         while(!s1.isEmpty() || !s2.isEmpty()) {
+        	if (s1.isEmpty() && !s2.isEmpty()) return false;
+        	if (!s1.isEmpty() && s2.isEmpty()) return false;
+        	
             TreeNode r1 = s1.pop();
             TreeNode r2 = s2.pop();
-
+            if (r1 == null && r2 != null) return false;
+            if (r2 == null && r1 != null) return false;
+            if (r1 == null && r2 == null) continue;
+            
             if (r1.val != r2.val) return false;
 
-            if (r1.left != null) s1.push(r1.left);
-            if (r1.right != null) s1.push(r1.right);
-            if (r2.left != null) s2.push(r2.left);
-            if (r2.right != null) s2.push(r2.right);
+            s1.push(r1.left);
+            s1.push(r1.right);
+            s2.push(r2.left);
+            s2.push(r2.right);
         }
         return true;
     }
